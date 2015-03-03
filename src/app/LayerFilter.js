@@ -62,10 +62,22 @@ define([
             console.log('app.LayerFilter::postCreate', arguments);
 
             array.forEach(this.values, function(item) {
-                domConstruct.create('option', {
-                    innerHTML: item.name,
-                    value: item.value
-                }, this.selectNode);
+                var options = {
+                    innerHTML: null,
+                    value: null
+                };
+
+                if (item.name) {
+                    options.innerHTML = item.name;
+                    options.value = item.value;
+                }
+                else
+                {
+                    options.innerHTML = item;
+                    options.value = item;
+                }
+
+                domConstruct.create('option', options, this.selectNode);
             }, this);
 
             this.inherited(arguments);

@@ -29,7 +29,8 @@ define(['dojo/has', 'esri/config'], function(has, esriConfig) {
 
         filters: {
             serviceType: 'SERVICE_TYPE = \'{0}\'',
-            serviceLevel: 'SERVICE_LEVEL = \'{0}\''
+            serviceLevel: 'SERVICE_LEVEL = \'{0}\'',
+            agency: 'NAME = \'{0}\''
         },
 
         topics: {
