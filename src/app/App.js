@@ -84,6 +84,7 @@ define([
                 url: config.urls.boundaries,
                 id: 'boundaries',
                 serviceType: 'feature',
+                mode: 0,
                 outFields: ['OBJECTID', 'SERVICE_LEVEL', 'SERVICE_TYPE', 'NAME']
             });
 
